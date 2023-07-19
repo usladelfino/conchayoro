@@ -31,7 +31,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
           BUCKET_S3_HOM: ${{ vars.BUCKET_S3_HOM }}
-
+          AWS_EC2_METADATA_DISABLED: true
+          
   deploy_production:
     needs: build
     runs-on: ubuntu-latest
@@ -51,3 +52,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
           BUCKET_S3_PRO: ${{ vars.BUCKET_S3_PRO }}
+          AWS_EC2_METADATA_DISABLED: true
