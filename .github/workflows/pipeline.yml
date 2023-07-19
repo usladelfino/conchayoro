@@ -37,7 +37,7 @@ jobs:
   deploy_production:
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'workflow_dispatch' && (contains(github.event.head_commit.message, 'feat') || contains(github.event.head_commit.message, 'fix'))
+    if: github.event_name == 'workflow_dispatch'
 
     steps:
       - name: Download artifact
