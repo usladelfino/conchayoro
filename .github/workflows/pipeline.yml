@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+          cache-dependency-path: /opt/hostedtoolcache/node/16.20.1/x64/bin/npm/package-lock.json
       - run: docker build -t $MODULE_FULLNAME $MODULE_NAME
       - run: |
           docker tag $MODULE_FULLNAME:$TAG \
