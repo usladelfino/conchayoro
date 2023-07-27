@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-          cache-dependency-path: home/runner/work/conchayoro/conchayoro/package-lock.json
+          cache-dependency-path: home/runner/work/conchayoro/package-lock.json
       - run: docker build -t $MODULE_FULLNAME $MODULE_NAME
       - run: |
           docker tag $MODULE_FULLNAME:$TAG \$REGISTRY_URL/$MODULE_FULLNAME:$TAG
