@@ -1,6 +1,6 @@
 FROM node:16-alpine As development
 WORKDIR /usr/src/app
-COPY --chown=node:node /home/runner/work/conchayoro/package*.json ./
+COPY --chown=node:node --from= /home/runner/work/conchayoro/package*.json ./
 RUN npm ci
 COPY --chown=node:node . .
 USER node
